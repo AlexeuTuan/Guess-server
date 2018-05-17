@@ -10,7 +10,7 @@ public class SQLiteClass {
 
     public static void Conn() throws ClassNotFoundException, SQLException, NamingException {
         Class.forName("org.sqlite.JDBC");
-        conn = DriverManager.getConnection("jdbc:sqlite:ImagesDB.s3db");
+        conn = DriverManager.getConnection("jdbc:sqlite:C:\\ImagesDB.s3db");
     }
 
     public static void addPicture(String arrayPicture) throws SQLException, ClassNotFoundException {

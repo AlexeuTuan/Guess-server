@@ -42,7 +42,11 @@ public class HelloServlet extends HttpServlet {
             }
         } else if(jb.toString().startsWith("2")) {
             try {
-                String ss = SQLiteClass.getPicture( (int) Math.random()*10);
+                String ss = SQLiteClass.getPicture( (int) 1);
+                res.setStatus(HttpServletResponse.SC_OK);
+                res.getWriter().write(ss);
+                res.getWriter().flush();
+                res.getWriter().close();
             } catch (SQLException e) {
                 e.printStackTrace();
             } catch (NamingException e) {
